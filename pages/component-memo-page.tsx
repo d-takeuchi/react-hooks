@@ -7,7 +7,7 @@ import { Fizz } from '../components/Fizz'
 import { Buzz } from '../components/Buzz'
 import { Layout } from '../components/Layout'
 
-const componentMemoPage: NextPage = () => {
+const ComponentMemoPage: NextPage = () => {
   const [count, setCount] = useState(1)
 
   const isFizz = count % 3 === 0
@@ -50,4 +50,4 @@ const mainTitle = css`
 const content = css`
   text-align: center;
 `
-export default componentMemoPage
+export default ComponentMemoPage

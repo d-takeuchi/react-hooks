@@ -7,7 +7,7 @@ import { DoubleButton } from '../components/DoubleButton'
 import { IncrementButton } from '../components/IncrementButton'
 import { Layout } from '../components/Layout'
 
-const useCallbackPage: NextPage = () => {
+const UseCallbackPage: NextPage = () => {
   const [count, setCount] = useState(0)
 
   const decrement = () => setCount((currentCount) => currentCount - 1)
@@ -43,4 +43,4 @@ const mainTitle = css`
 const content = css`
   text-align: center;
 `
-export default useCallbackPage
+export default UseCallbackPage

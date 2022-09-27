@@ -1,37 +1,16 @@
 import { NextPage } from 'next'
-import { useState } from 'react'
 import { css } from '@emotion/react'
 import Link from 'next/link'
 
-import { Fizz } from '../components/Fizz'
-import { Buzz } from '../components/Buzz'
 import { Layout } from '../components/Layout'
 
-const useMemoPage: NextPage = () => {
-  const [count, setCount] = useState(1)
-
-  const isFizz = count % 3 === 0
-  const isBuzz = count % 5 === 0
-
-  console.log(`親ページが再レンダリングされました count : ${count}`)
+const UseMemoPage: NextPage = () => {
   return (
     <Layout title='useMemoについて'>
       <div css={wrapper}>
         <h1 css={mainTitle}>useMemoによるメモ化について</h1>
 
         <main css={content}>
-          <button
-            onClick={() => {
-              setCount((currentCount) => currentCount + 1)
-            }}
-          >
-            +1
-          </button>
-          <p>{`現在のカウント : ${count}`}</p>
-          <p>
-            <Fizz isFizz={isFizz} />
-            <Buzz isBuzz={isBuzz} />
-          </p>
           <Link href='/'>
             <a>トップに戻る</a>
           </Link>
@@ -50,4 +29,4 @@ const mainTitle = css`
 const content = css`
   text-align: center;
 `
-export default useMemoPage
+export default UseMemoPage

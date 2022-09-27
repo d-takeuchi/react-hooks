@@ -7,7 +7,7 @@ import { Fizz } from '../components/Fizz'
 import { Buzz2 } from '../components/Buzz2'
 import { Layout } from '../components/Layout'
 
-const memoProblemPage: NextPage = () => {
+const MemoProblemPage: NextPage = () => {
   const [count, setCount] = useState(1)
 
   const isFizz = count % 3 === 0
@@ -55,4 +55,4 @@ const mainTitle = css`
 const content = css`
   text-align: center;
 `
-export default memoProblemPage
+export default MemoProblemPage
